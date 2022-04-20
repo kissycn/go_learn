@@ -47,15 +47,15 @@ type Service interface {
 	Log()
 }
 
-type Logger struct {
+type Logger1 struct {
 }
 
-func (log *Logger) Log() {
+func (log *Logger1) Log() {
 	fmt.Println("system log")
 }
 
 type GameService struct {
-	Logger
+	Logger1
 }
 
 func (gs *GameService) Start() {
