@@ -5,11 +5,11 @@ import (
 	"testing"
 )
 
-type File struct {
-}
-
 type DataWriter interface {
 	WriteData(data interface{}) error
+}
+
+type File struct {
 }
 
 func (f *File) WriteData(data interface{}) error {
