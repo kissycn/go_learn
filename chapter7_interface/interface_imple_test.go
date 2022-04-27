@@ -14,6 +14,11 @@ type Closer interface {
 	Close()
 }
 
+type WriterClose interface {
+	Writer
+	Closer
+}
+
 type Socket1 struct {
 }
 
