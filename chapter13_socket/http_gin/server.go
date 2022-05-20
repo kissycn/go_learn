@@ -72,7 +72,8 @@ func router() http.Handler {
 
 	v1 := router.Group("/v1")
 	{
-		productV1 := v1.Group("/product").Use(gin.BasicAuth(gin.Accounts{"foo": "bar"}))
+		//productV1 := v1.Group("/product").Use(gin.BasicAuth(gin.Accounts{"foo": "bar"}))
+		productV1 := v1.Group("/product")
 		productV1.GET(":name", handler.Get)
 		productV1.POST("", handler.Create)
 	}
