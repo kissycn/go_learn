@@ -17,6 +17,8 @@ require (
 	github.com/spf13/viper v1.11.0
 	go.uber.org/zap v1.21.0
 	golang.org/x/sync v0.0.0-20220513210516-0976fa681c29
+	google.golang.org/grpc v1.46.2
+	google.golang.org/protobuf v1.28.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
-	k8s.io/klog/v2 v2.60.1 // indirect
+	k8s.io/klog/v2 v2.60.1
 )
