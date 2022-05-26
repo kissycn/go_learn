@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package="./service";
+
+// 从执行protoc命令的目录作为路径
+import "proto/address.proto";
+
+package service;
+
+message User {
+  string name = 1;
+  Address addr = 2;
+}
+
+message UserRequest{
+  int32 userId = 1;
+}
+
+message UserResponse {
+  User user = 1;
+}
+
+
+service UserService {
+  rpc GerUser(UserRequest) returns(UserResponse);
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package="./service";
+
+package service;
+
+message Address {
+  string addr = 1;
+  string zipcode = 2;
+}
