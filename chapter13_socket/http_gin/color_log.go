@@ -8,7 +8,9 @@ import (
 func main() {
 	// gin.DisableConsoleColor()
 	// by default
-	gin.ForceConsoleColor()
+	//gin.ForceConsoleColor()
+
+	gin.SetMode(gin.ReleaseMode)
 
 	r := gin.Default()
 	r.GET("/color", func(c *gin.Context) {

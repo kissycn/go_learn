@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"google.golang.org/grpc"
 	"ielee.com/go_learn/chapter13_socket/grpc/cs/service"
 	"log"
@@ -18,4 +19,6 @@ func main() {
 		log.Fatal("服务监听端口失败", err)
 	}
 	_ = server.Serve(listener)
+
+	fmt.Println("")
 }
