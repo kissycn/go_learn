@@ -8,7 +8,21 @@ import (
 func TestTwoSum(t *testing.T) {
 	nums := []int{3, 2, 4, 1}
 	target := 6
-	fmt.Println(twoSum1(nums, target))
+	fmt.Println(twoSumByMap(nums, target))
+}
+
+func twoSumByMap(nums []int, target int) []int {
+	// 为了减少二层循环遍历，将第二次循环的val作为map的key存下来，空间换时间
+	m := map[int]int{}
+	for i, v := range nums {
+		if val, ok := m[target-v]; ok {
+			return []int{val, i}
+		}
+		// 一定要注意key是对应数组的val
+		m[v] = i
+	}
+
+	return []int{}
 }
 
 func twoSum(nums []int, target int) []int {
