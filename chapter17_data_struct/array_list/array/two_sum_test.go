@@ -8,7 +8,7 @@ import (
 func TestTwoSum(t *testing.T) {
 	nums := []int{3, 2, 4, 1}
 	target := 6
-	fmt.Println(twoSumByMap(nums, target))
+	fmt.Println(twoSum(nums, target))
 }
 
 func twoSumByMap(nums []int, target int) []int {
@@ -27,7 +27,7 @@ func twoSumByMap(nums []int, target int) []int {
 
 func twoSum(nums []int, target int) []int {
 	a := []int{}
-	for i := 0; i < len(nums); i++ {
+	for i := 0; i < len(nums)-1; i++ {
 		for j := i + 1; j < len(nums); j++ {
 			if nums[i]+nums[j] == target {
 				a = append(a, i)
