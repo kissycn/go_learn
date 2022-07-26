@@ -29,3 +29,25 @@ func min(a, b int) int {
 	}
 	return a
 }
+
+// 双指针，两边向中间收敛，收敛策略为：每次总是移动较小的那个
+func TestArrayByIndex(t *testing.T) {
+	height := []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
+	left, right := 0, len(height)-1
+	area, max := 0, 0
+
+	for left < right {
+		area = min(height[left], height[right]) * (right - left)
+		if area > max {
+			max = area
+		}
+
+		// 如果是 <= 则会重复算一次
+		if height[left] < height[right] {
+			left++
+		} else {
+			right--
+		}
+	}
+	fmt.Println(max)
+}
