@@ -5,9 +5,6 @@ import (
 	"testing"
 )
 
-func TestNew(t *testing.T) {
-}
-
 func TestFront(t *testing.T) {
 	l := New()
 	l.PushFront(3)
