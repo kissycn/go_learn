@@ -6,10 +6,30 @@ func TestLinkListCyle(t *testing.T) {
 
 }
 
-// hash算法实现链表回环检查
+// 使用快慢表实现链表回环检查
 func hasCycle(head *ListNode) bool {
-	m := map[*ListNode]struct{}{}
+	if head == nil || head.Next == nil {
+		return false
+	}
 
+	slow, fast := head, head.Next
+	for slow != fast {
+		if fast == nil || fast.Next == nil {
+			return false
+		}
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+	return true
+}
+
+// hash算法实现链表回环检查
+func hasCycle1(head *ListNode) bool {
+	if head == nil || head.Next == nil {
+		return false
+	}
+
+	m := map[*ListNode]struct{}{}
 	for head != nil {
 		if _, ok := m[head]; ok {
 			return true
