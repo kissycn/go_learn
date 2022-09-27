@@ -3,7 +3,7 @@ package book_test
 import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"ielee.com/go_learn/chapter12_test/ginkgo/book"
+	"ielee.com/go_research/chapter12_test/ginkgo/book"
 )
 
 var _ = Describe("Books", func() {

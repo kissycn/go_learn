@@ -1,4 +1,4 @@
-module ielee.com/go_learn
+module ielee.com/go_research
 
 go 1.16
 
