@@ -1,8 +1,15 @@
 #!/bin/bash
 
-echo '================= $n ================'
-echo $0
-echo $1
-echo $2
+echo "Process ID: $$"
+echo "File param: $0"
+echo "First param: $1"
+echo "Seconds name: $2"
+echo "Total: $#"
 
-echo $#
+for i in "$*"; do
+    echo $i
+done
+
+for j in "$@"; do
+    echo $j
+done
