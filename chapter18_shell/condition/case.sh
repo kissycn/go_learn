@@ -1,11 +1,11 @@
 #!/bin/bash
 
 case $1 in
-"1")
+1)
   echo "one"
   ;;
 
-"2")
+2)
   echo "two"
   ;;
 
